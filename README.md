@@ -13,10 +13,9 @@ Implementar una arquitectura de seguridad perimetral con tres zonas de red separ
 
 ```
 dmz-lab/
-├── DMZ_PROJECT.pka          # Archivo final de Cisco Packet Tracer
 ├── informe/
-│   └── Informe_DMZ_Laboratorio.md   # Informe técnico completo
-├── evidencias/              # Capturas de pantalla de las pruebas
+│   └── Informe_DMZ_Laboratorio.md 
+├── evidencias/              
 │   ├── config_pc_internal.png
 │   ├── config_pc_external.png
 │   ├── interfaces_router.png
