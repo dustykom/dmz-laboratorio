@@ -1,30 +1,57 @@
-# HTML Hello
+# 🛡️ DMZ Lab - Cisco Packet Tracer
 
-The most basic boilerplate for any 4Geeks Academy student, start your very first website from scratch.
+Configuración de una red segura con Zona Desmilitarizada (DMZ) usando un router Cisco ISR simulado en Cisco Packet Tracer, aplicando NAT estático y ACLs extendidas para controlar el tráfico entre LAN, DMZ e Internet.
 
-> There is a video tutorial on [how to use this template to create your very first website here](https://youtu.be/dfbDCMu_p-0).
+## Objetivo
 
-## What to do next?
+Implementar una arquitectura de seguridad perimetral con tres zonas de red separadas, garantizando que:
+- Solo el tráfico HTTP (puerto 80) desde Internet pueda llegar al servidor web en la DMZ.
+- La red DMZ no pueda iniciar conexiones hacia la LAN interna.
+- Los usuarios internos puedan acceder al servidor web de la DMZ.
 
-Create an `index.html` file with the [basic HTML structure](http://4geeks.com/lesson/what-is-html-learn-html#page-structure) and see it live by running a web-server using the following command:
+## Contenido del repositorio
 
-```bash
-$ pip3 install flask && python3 server.py
+```
+dmz-lab/
+├── DMZ_PROJECT.pka          # Archivo final de Cisco Packet Tracer
+├── informe/
+│   └── Informe_DMZ_Laboratorio.md   # Informe técnico completo
+├── evidencias/              # Capturas de pantalla de las pruebas
+│   ├── config_pc_internal.png
+│   ├── config_pc_external.png
+│   ├── interfaces_router.png
+│   ├── config_nat.png
+│   ├── config_acls.png
+│   ├── web_desde_external.png
+│   ├── web_desde_internal.png
+│   ├── ping_bloqueado_external.png
+│   ├── ping_bloqueado_dmz_lan.png
+│   └── actividad_completada.png
+└── README.md
 ```
 
-- You can create as many HTML files as you want.
-- You can also create CSS files and import them into your website using a `<link>` tag placed between the `<head></head>` tags, like this:
+## Topología implementada
 
-```html
-<head>
-  ...
-  <link rel="stylesheet" type="text/css" href="styles.css">
-  ...
-</head>
-```
+| Zona | Red | Interfaz | Dispositivo |
+|------|-----|----------|-------------|
+| LAN Interna | 192.168.1.0/24 | GigabitEthernet0/0 | PC_Internal |
+| DMZ | 192.168.2.0/24 | GigabitEthernet0/1 | Web_DMZ |
+| Red Externa (WAN) | 192.168.3.0/24 | GigabitEthernet0/2 | PC_External |
+
+## Tecnologías utilizadas
+
+- Cisco Packet Tracer
+- Router Cisco ISR (IOS 15.1)
+- NAT estático
+- ACLs extendidas nombradas
+
+## Cómo abrir el proyecto
+
+1. Descarga e instala [Cisco Packet Tracer](https://www.netacad.com/courses/packet-tracer).
+2. Abre el archivo `DMZ_PROJECT.pka` desde Packet Tracer.
+3. Revisa la topología y los comandos aplicados en el Router_FW.
 
 ### Contributors
 
-This template was built as part of the [Full Stack Developer course](https://4geeksacademy.com/us/coding-bootcamps/part-time-full-stack-developer) at [4Geeks Academy Coding Bootcamp](https://4geeksacademy.com/us/coding-bootcamp) by [Alejandro Sanchez](https://twitter.com/alesanchezr) and [many other contributors](https://github.com/4GeeksAcademy/html-hello/graphs/contributors).
-
-You can find other templates and resources like this at the [school's GitHub page](https://github.com/4geeksacademy/).
+Este laboratorio fue desarrollado como parte del curso de redes en [4Geeks Academy Coding Bootcamp](https://4geeksacademy.com/us/coding-bootcamp).
+Puedes encontrar más recursos y plantillas en la [página de GitHub de la escuela](https://github.com/4geeksacademy/).
