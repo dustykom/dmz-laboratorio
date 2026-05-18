@@ -45,11 +45,6 @@ dmz-lab/
 - NAT estático
 - ACLs extendidas nombradas
 
-## Cómo abrir el proyecto
-
-1. Descarga e instala [Cisco Packet Tracer](https://www.netacad.com/courses/packet-tracer).
-2. Abre el archivo `DMZ_PROJECT.pka` desde Packet Tracer.
-3. Revisa la topología y los comandos aplicados en el Router_FW.
 
 ### Contributors
 
